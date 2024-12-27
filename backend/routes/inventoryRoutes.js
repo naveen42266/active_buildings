@@ -18,7 +18,7 @@ router.post("/add", async (req, res) => {
           date: date,
         });
 
-        res.status(201).json(result); // Return the newly created item
+        res.status(201).json({ message: "Inventory item added successfully" });
       } catch (err) {
         console.error(err);
         res.status(500).json({ message: "Failed to add inventory item" });
